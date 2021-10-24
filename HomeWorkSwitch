@@ -1,0 +1,43 @@
+<?php
+
+$inputYearRand= rand(1300,2021);
+
+echo 'Случайно въведената година е:'. $inputYearRand. 'г.'. '<br/>';
+
+$intCentury= (int) ($inputYearRand/100);
+
+echo $inputYearRand. 'г. е част от '.$intCentury. '-ти век.'.'<br/>';
+
+echo 'долу е switch-a'. '<br/>';
+
+switch ($intCentury) {
+    case 16:
+echo 'годината е в 16-ти век.';
+        break;
+    case 17:
+        echo 'годината е в 17-ти век.'.'<br/>';
+        //тук условието може и да е >1750, но реших да изпробвам >= хахах
+        if ($inputYearRand >= 1751) {
+            echo 'годината е част от втората половина на века /17-ти/.';
+        } else {
+            echo 'годината е част от първата половина на века /17-ти/.';
+        }
+        break;
+    case 18:
+        echo 'годината е в 18-ти век.';
+        break;
+    case 19: 
+        echo 'годината е в 19-ти век.';
+        break;
+    case 20:
+        echo 'годината е в 20-ти век.';
+        break;
+    case 21: 
+        echo 'годината е в 21-ви евк.';
+        break;
+        
+    default: 
+        echo 'годината е преди или през 15-ти век';
+}
+
+     
